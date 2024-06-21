@@ -1,0 +1,25 @@
+
+<?php
+function estaNoIntervalo($numero) {
+    return $numero >= 0 && $numero <= 100;
+}
+
+$contagem = 0;
+
+
+while (true) {
+    echo "Digite um número (digite 0 para encerrar): ";
+    $numero = intval(fgets(STDIN)); // Ler número do usuário
+
+    if ($numero == 0) {
+        break; // Encerra o loop se o usuário digitar 0
+    }
+
+  
+    if (estaNoIntervalo($numero)) {
+        $contagem++;
+    }
+}
+
+echo "Total de números digitados no intervalo de 0 a 100: $contagem\n";
+?>
