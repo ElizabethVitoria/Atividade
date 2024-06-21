@@ -1,0 +1,14 @@
+<?php
+function repetirPalavra($palavra, $linhas) {
+    for ($i = 1; $i <= $linhas; $i++) {
+        for ($j = 1; $j <= $i; $j++) {
+            echo $palavra . " ";
+        }
+        echo "\n";
+    }
+}
+
+$palavra = "Paz";
+$linhas = 3;
+repetirPalavra($palavra, $linhas);
+?>
