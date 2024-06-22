@@ -1,0 +1,39 @@
+<?php
+
+$vetor = [];
+for ($i = 0; $i < 20; $i++) {
+    $vetor[] = rand(1, 100);
+}
+
+$maior = $vetor[0];
+$menor = $vetor[0];
+
+foreach ($vetor as $numero) {
+    if ($numero > $maior) {
+        $maior = $numero;
+    }
+    if ($numero < $menor) {
+        $menor = $numero;
+    }
+}
+
+
+$numerosPares = 0;
+foreach ($vetor as $numero) {
+    if ($numero % 2 == 0) {
+        $numerosPares++;
+    }
+}
+$percentualPares = ($numerosPares / count($vetor)) * 100;
+
+
+$media = array_sum($vetor) / count($vetor);
+
+
+echo "Vetor: [" . implode(", ", $vetor) . "]<br>";
+echo "Maior número: $maior<br>";
+echo "Menor número: $menor<br>";
+echo "Percentual de números pares: $percentualPares%<br>";
+echo "Média dos elementos do vetor: $media<br>";
+
+?>
