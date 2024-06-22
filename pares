@@ -1,0 +1,13 @@
+<?php
+
+$vetor = [2, 5, 7, 10, 13, 20, 25, 31, 44, 50, 63, 70, 75, 82, 99];
+
+foreach ($vetor as $numero) {
+    if ($numero % 2 == 0) {
+        echo "$numero é par<br>";
+    } else {
+        echo "$numero é ímpar<br>";
+    }
+}
+
+?>
